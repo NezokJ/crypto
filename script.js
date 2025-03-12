@@ -1,7 +1,7 @@
 async function fetchCryptoData() {
     try {
         // Получаем данные с CoinGecko API
-        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,cardano,tether');
+        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,cardano,tether,solana,dogecoin,bnb');
         const data = await response.json();
 
         // Обновляем данные на странице
@@ -25,11 +25,23 @@ async function fetchCryptoData() {
         document.getElementById('usdt-market-cap').textContent = `$${data[2].market_cap.toLocaleString()}`;
         document.getElementById('usdt-high').textContent = `$${data[2].high_24h.toLocaleString()}`;
 
+        // Solana
+        const solPrice = data[3].current_price;
+        document.getElementById('sol-price').textContent = `$${solPrice.toLocaleString()}`;
+        document.getElementById('sol-market-cap').textContent = `$${data[3].market_cap.toLocaleString()}`;
+        document.getElementById('sol-high').textContent = `$${data[3].high_24h.toLocaleString()}`;
+
+        // Dogecoin
+        const dogePrice = data[5].current_price;
+        document.getElementById('doge-price').textContent = `$${dogePrice.toLocaleString()}`;
+        document.getElementById('doge-market-cap').textContent = `$${data[5].market_cap.toLocaleString()}`;
+        document.getElementById('doge-high').textContent = `$${data[5].high_24h.toLocaleString()}`;
+        
         // Cardano
-        const adaPrice = data[3].current_price;
+        const adaPrice = data[4].current_price;
         document.getElementById('ada-price').textContent = `$${adaPrice.toLocaleString()}`;
-        document.getElementById('ada-market-cap').textContent = `$${data[3].market_cap.toLocaleString()}`;
-        document.getElementById('ada-high').textContent = `$${data[3].high_24h.toLocaleString()}`;
+        document.getElementById('ada-market-cap').textContent = `$${data[4].market_cap.toLocaleString()}`;
+        document.getElementById('ada-high').textContent = `$${data[4].high_24h.toLocaleString()}`;
 
 
         // Топ Валют
