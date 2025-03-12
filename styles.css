@@ -1,0 +1,141 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 36px;
+    color: #4A90E2;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Блок с курсами */
+.container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
+
+/* Стили для таблиц */
+.table-section {
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #222;
+    color: #ddd;
+}
+
+th, td {
+    border-bottom: 1px solid #444;
+}
+
+tr:hover {
+    background-color: #3a3a3a;
+}
+
+/* Стили для графиков */
+.chart-section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.chart {
+    height: 400px; /* Увеличиваем высоту */
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow-x: auto;
+    padding: 10px 0; /* Добавим отступы по бокам */
+}
+
+.chart .block {
+    height: 100%;
+    width: 120px; /* Увеличиваем ширину блока */
+    background: linear-gradient(to top, #4A90E2, #0062cc); /* Градиент */
+    position: relative;
+    margin-left: 10px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Тень */
+    transition: height 0.5s ease-in-out, transform 0.3s ease-in-out; /* Плавные изменения */
+}
+
+.chart .block:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+.chart .block span {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+/* Стили для ссылок */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+footer a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

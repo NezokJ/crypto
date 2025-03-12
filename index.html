@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы Криптовалют</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Курсы Криптовалют</h1>
+
+    <div class="container">
+        <div class="table-section">
+            <h2>Курсы Криптовалют</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Цена (USD)</th>
+                        <th>Капитализация</th>
+                        <th>Максимум за сутки</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-table">
+                    <tr>
+                        <td>Bitcoin (BTC)</td>
+                        <td id="btc-price">Загрузка...</td>
+                        <td id="btc-market-cap">Загрузка...</td>
+                        <td id="btc-high">Загрузка...</td>
+                    </tr>
+                    <tr>
+                        <td>Ethereum (ETH)</td>
+                        <td id="eth-price">Загрузка...</td>
+                        <td id="eth-market-cap">Загрузка...</td>
+                        <td id="eth-high">Загрузка...</td>
+                    </tr>                    
+                    <tr>
+                        <td>Tether (USDT)</td>
+                        <td id="usdt-price">Загрузка...</td>
+                        <td id="usdt-market-cap">Загрузка...</td>
+                        <td id="usdt-high">Загрузка...</td>
+                    </tr>
+                    <tr>
+                        <td>Cardano (ADA)</td>
+                        <td id="ada-price">Загрузка...</td>
+                        <td id="ada-market-cap">Загрузка...</td>
+                        <td id="ada-high">Загрузка...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="chart-section">
+            <h2>График Bitcoin</h2>
+            <div class="chart" id="btc-chart">
+                <!-- Блоки графика Bitcoin будут добавляться сюда -->
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>График Ethereum</h2>
+            <div class="chart" id="eth-chart">
+                <!-- Блоки графика Ethereum будут добавляться сюда -->
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>🔥Топ Криптовалют</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Цена (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="top-crypto-table">
+                    <tr>
+                        <td>1</td>
+                        <td>Bitcoin (BTC)</td>
+                        <td id="top-btc-price">Загрузка...</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ethereum (ETH)</td>
+                        <td id="top-eth-price">Загрузка...</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tether (USDT)</td>
+                        <td id="top-usdt-price">Загрузка...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>Данные предоставлены <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a></p>
+        <p>Krailex Development 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
