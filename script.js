@@ -1,7 +1,7 @@
 async function fetchCryptoData() {
     try {
         // Получаем данные с CoinGecko API
-        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,cardano,tether,solana,dogecoin,bnb');
+        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,cardano,tether,solana,dogecoin');
         const data = await response.json();
 
         // Обновляем данные на странице
@@ -36,7 +36,7 @@ async function fetchCryptoData() {
         document.getElementById('doge-price').textContent = `$${dogePrice.toLocaleString()}`;
         document.getElementById('doge-market-cap').textContent = `$${data[5].market_cap.toLocaleString()}`;
         document.getElementById('doge-high').textContent = `$${data[5].high_24h.toLocaleString()}`;
-        
+
         // Cardano
         const adaPrice = data[4].current_price;
         document.getElementById('ada-price').textContent = `$${adaPrice.toLocaleString()}`;
